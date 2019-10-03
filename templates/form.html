@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<p>テスト掲示板</p>
+<form action="/result" method="post">
+  <input type="text" name="article">
+  <button type="submit">投稿する</button>
+</form>
+{% for words in list %}
+    <p>{{ words }} ------{{ now }}</p>
+  {% endfor %}
+
+{% endblock %}
